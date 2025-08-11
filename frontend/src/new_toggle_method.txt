@@ -1,0 +1,72 @@
+  /**
+   * 🔍 Toggle visibility of specific IFC categories using ThatOpen best practices
+   */
+  private async toggleCategoryVisibility(category: string) {
+    if (this.loadedModels.length === 0) return;
+
+    try {
+      console.log(`🔄 Toggling visibility for category: ${category}`);
+      
+      // Method 1: Use FragmentsModels direct visibility operations (most reliable)
+      for (const { model } of this.loadedModels) {
+        try {
+          // Following ThatOpen tutorial pattern - use exact category matching
+          const categoryRegex = new RegExp(`^${category}$`);
+          const items = await model.getItemsOfCategories([categoryRegex]);
+          const localIds = Object.values(items).flat();
+          
+          console.log(`📊 Found ${localIds.length} items for category ${category} in model`);
+          
+          if (localIds.length > 0) {
+            // Use the toggleVisible method from the tutorial
+            await model.toggleVisible(localIds);
+            console.log(`🔄 Toggled ${localIds.length} ${category} items`);
+          }
+        } catch (modelError) {
+          console.warn(`Model visibility operation failed for ${category}:`, modelError);
+          
+          // Try alternative patterns if exact match fails
+          const variations = [
+            category.toLowerCase(),
+            category.replace('IFC', ''),
+            category.replace('IFC', '').toLowerCase()
+          ];
+          
+          for (const variation of variations) {
+            try {
+              const altRegex = new RegExp(`^${variation}$`, 'i');
+              const items = await model.getItemsOfCategories([altRegex]);
+              const localIds = Object.values(items).flat();
+              
+              if (localIds.length > 0) {
+                await model.toggleVisible(localIds);
+                console.log(`✅ Success with variation: ${variation} (${localIds.length} items)`);
+                break;
+              }
+            } catch (altError) {
+              console.log(`Variation ${variation} failed:`, altError.message);
+            }
+          }
+        }
+      }
+      
+      // Update fragments to reflect visibility changes
+      if (this.fragments?.update) {
+        this.fragments.update(true);
+      }
+      
+      // Force render update
+      this.forceRenderUpdate();
+      
+    } catch (error) {
+      console.error(`❌ Failed to toggle ${category} visibility:`, error);
+      
+      // Final fallback to basic approach
+      try {
+        console.log(`🔄 Trying basic fallback for ${category}...`);
+        await this.toggleCategoryVisibilityFallback(category);
+      } catch (fallbackError) {
+        console.error(`❌ All methods failed:`, fallbackError);
+      }
+    }
+  }

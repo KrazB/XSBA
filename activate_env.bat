@@ -1,0 +1,3 @@
+@echo off 
+echo Activating XSBA Python Virtual Environment... 
+call venv\Scripts\activate.bat 

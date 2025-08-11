@@ -1,0 +1,33 @@
+{
+  "conversion_summary": {
+    "total_files": 1,
+    "successful": 1,
+    "failed": 0,
+    "skipped": 0,
+    "start_time": "2025-06-03 16:51:47.430247",
+    "end_time": "2025-06-03 16:51:48.823813",
+    "total_time": 1.393566,
+    "results": [
+      {
+        "file": "Slab.ifc",
+        "status": "success",
+        "message": "Successfully converted Slab.ifc to fragments",
+        "conversion_time": 1.3915529251098633,
+        "stats": {
+          "inputSizeMB": "0.00",
+          "outputSizeMB": "0.00",
+          "compressionRatio": "66.7%",
+          "conversionTimeSeconds": "0.81",
+          "success": true
+        }
+      }
+    ]
+  },
+  "environment": {
+    "source_directory": "D:\\XQG4\\XQG4_XLRN\\QLRN_SVERCHK",
+    "target_directory": "D:\\XQG4\\XQG4_XLRN\\QLRN_SVERCHK",
+    "converter_directory": "D:\\XQG4\\frag_convert",
+    "working_directory": "D:\\XQG4\\frag_convert"
+  },
+  "timestamp": "2025-06-03T16:51:48.829708"
+}

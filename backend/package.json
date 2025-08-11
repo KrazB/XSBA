@@ -1,0 +1,33 @@
+{
+  "name": "qgen-impfrag-backend",
+  "version": "1.0.0",
+  "description": "Backend service for IFC processing and fragments conversion",
+  "type": "module",
+  "main": "src/ifc_processor.py",
+  "scripts": {
+    "install-deps": "npm install",
+    "start": "python src/ifc_processor.py",
+    "dev": "python src/ifc_processor.py --dev",
+    "watch": "python src/ifc_processor.py --watch",
+    "convert": "python src/ifc_processor.py --convert",
+    "test": "python -m pytest tests/",
+    "clean": "rm -rf logs/* data/fragments/*"
+  },
+  "dependencies": {
+    "@thatopen/components": "^2.4.11",
+    "@thatopen/fragments": "^3.0.7",
+    "web-ifc": "^0.0.68"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "ifc",
+    "fragments",
+    "backend",
+    "conversion",
+    "bim"
+  ],
+  "author": "XQG4_AXIS Team",
+  "license": "MIT"
+}

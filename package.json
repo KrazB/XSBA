@@ -1,0 +1,59 @@
+{
+  "name": "qgen-impfrag",
+  "version": "1.0.0",
+  "description": "IFC Processing and Fragment Viewer Application - Complete Pipeline",
+  "type": "module",
+  "scripts": {
+    "setup": "npm run setup:backend && npm run setup:frontend",
+    "setup:backend": "cd backend && npm install && pip install -r requirements.txt",
+    "setup:frontend": "cd frontend && npm install",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd backend && python src/ifc_processor.py --watch",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build": "npm run build:backend && npm run build:frontend",
+    "build:backend": "cd backend && python -m py_compile src/*.py",
+    "build:frontend": "cd frontend && npm run build",
+    "build:secure": "./scripts/secure-build.sh",
+    "start": "docker-compose up",
+    "start:dev": "docker-compose -f docker-compose.dev.yml up",
+    "stop": "docker-compose down",
+    "clean": "docker-compose down -v && docker system prune -f",
+    "test": "npm run test:backend && npm run test:frontend",
+    "test:backend": "cd backend && python -m pytest tests/",
+    "test:frontend": "cd frontend && npm run test",
+    "test:security": "python3 tests/test_suite.py",
+    "convert": "cd backend && python src/ifc_processor.py",
+    "serve": "cd frontend && npm run preview",
+    "health-check": "./scripts/health-check.sh"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0"
+  },
+  "keywords": [
+    "ifc",
+    "fragments",
+    "bim",
+    "3d-viewer",
+    "thatopen",
+    "docker",
+    "typescript"
+  ],
+  "engines": {
+    "node": ">=18.0.0",
+    "python": ">=3.9.0"
+  },
+  "author": "XQG4_AXIS Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KrazB/XVUE.git",
+    "directory": "XQG4_AXIS/QGEN_IMPFRAG"
+  },
+  "workspaces": [
+    "backend",
+    "frontend"
+  ]
+}

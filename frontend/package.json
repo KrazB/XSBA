@@ -1,0 +1,43 @@
+{
+  "name": "qgen-impfrag-frontend",
+  "version": "1.0.0",
+  "description": "Frontend 3D viewer for fragments files - QGEN_IMPFRAG",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0 --port 3111",
+    "build": "tsc && vite build",
+    "preview": "vite preview --host 0.0.0.0 --port 3111",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint:fix": "eslint src --ext ts,tsx --fix"
+  },
+  "dependencies": {
+    "@thatopen/components": "^2.4.11",
+    "@thatopen/fragments": "^3.0.7",
+    "@thatopen/ui": "^2.4.4",
+    "@thatopen/ui-obc": "^2.4.4",
+    "three": "^0.175.0",
+    "axios": "^1.6.2",
+    "lit": "^3.1.0"
+  },
+  "devDependencies": {
+    "@types/three": "^0.175.0",
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "@typescript-eslint/parser": "^6.14.0",
+    "eslint": "^8.55.0",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.10",
+    "vitest": "^1.0.4"
+  },
+  "keywords": [
+    "3d-viewer",
+    "fragments",
+    "bim",
+    "thatopen",
+    "typescript",
+    "vite"
+  ],
+  "author": "XQG4_AXIS Team",
+  "license": "MIT"
+}

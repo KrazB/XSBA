@@ -1,0 +1,33 @@
+{
+  "conversion_summary": {
+    "total_files": 1,
+    "successful": 1,
+    "failed": 0,
+    "skipped": 0,
+    "start_time": "2025-06-03 16:52:52.163449",
+    "end_time": "2025-06-03 16:52:53.916610",
+    "total_time": 1.753161,
+    "results": [
+      {
+        "file": "25022-EIC-CAN-A08-M3-VDC-00002.ifc",
+        "status": "success",
+        "message": "Successfully converted 25022-EIC-CAN-A08-M3-VDC-00002.ifc to fragments",
+        "conversion_time": 1.7135701179504395,
+        "stats": {
+          "inputSizeMB": "1.63",
+          "outputSizeMB": "0.10",
+          "compressionRatio": "93.8%",
+          "conversionTimeSeconds": "1.20",
+          "success": true
+        }
+      }
+    ]
+  },
+  "environment": {
+    "source_directory": "D:\\XQG4\\XQG4_XCIM\\NLEX_CANDAB2\\F1_CO",
+    "target_directory": "D:\\XQG4\\XQG4_XCIM\\NLEX_CANDAB2\\F1_CO",
+    "converter_directory": "D:\\XQG4\\frag_convert",
+    "working_directory": "D:\\XQG4\\frag_convert"
+  },
+  "timestamp": "2025-06-03T16:52:53.920162"
+}

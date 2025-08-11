@@ -1,0 +1,140 @@
+{
+  "platform": "linux",
+  "results": [
+    {
+      "name": "Environment Detection",
+      "status": "passed",
+      "details": [
+        "Platform detected: linux",
+        "Project root found: /data/XVUE/XQG4_AXIS/QGEN_IMPFRAG",
+        "Port config: Backend=8111, Frontend=3111",
+        "All required directories found"
+      ],
+      "errors": []
+    },
+    {
+      "name": "Cross-Platform Paths",
+      "status": "passed",
+      "details": [
+        "ifc_input: /data/XVUE/XQG4_AXIS/QGEN_IMPFRAG/data/ifc",
+        "Directory exists: ifc_input",
+        "fragments_output: /data/XVUE/XQG4_AXIS/QGEN_IMPFRAG/data/fragments",
+        "Directory exists: fragments_output",
+        "reports: /data/XVUE/XQG4_AXIS/QGEN_IMPFRAG/data/reports",
+        "Directory exists: reports",
+        "logs: /data/XVUE/XQG4_AXIS/QGEN_IMPFRAG/backend/logs",
+        "Directory exists: logs",
+        "Environment file created: .env.auto"
+      ],
+      "errors": []
+    },
+    {
+      "name": "Python Environment",
+      "status": "passed",
+      "details": [
+        "Python version: 3.12.3",
+        "Python executable: /data/XVUE/XQG4_AXIS/QGEN_IMPFRAG/backend/venv/bin/python3",
+        "Virtual env active: /data/XVUE/XQG4_AXIS/QGEN_IMPFRAG/backend/venv",
+        "Pip available: pip3",
+        "Backend dependencies available"
+      ],
+      "errors": []
+    },
+    {
+      "name": "Node.js Environment",
+      "status": "passed",
+      "details": [
+        "Node.js available: v18.20.8",
+        "NPM available: 10.9.3",
+        "Frontend dependencies installed"
+      ],
+      "errors": []
+    },
+    {
+      "name": "Application Files",
+      "status": "passed",
+      "details": [
+        "\u2705 backend/app.py",
+        "\u2705 frontend/index.html",
+        "\u2705 frontend/package.json",
+        "\u2705 backend/requirements.txt",
+        "\u2705 Dockerfile",
+        "\u2705 docker-compose.yml",
+        "\ud83d\udcc1 data/ifc (3 files)",
+        "\ud83d\udcc1 data/fragments (3 files)",
+        "\ud83d\udcc1 data/reports (1 files)"
+      ],
+      "errors": []
+    },
+    {
+      "name": "Backend Startup",
+      "status": "passed",
+      "details": [
+        "Backend syntax valid",
+        "Backend imports successful"
+      ],
+      "errors": []
+    },
+    {
+      "name": "Frontend Build",
+      "status": "passed",
+      "details": [
+        "Frontend build successful",
+        "Build artifacts created"
+      ],
+      "errors": []
+    },
+    {
+      "name": "Docker Environment",
+      "status": "failed",
+      "details": [
+        "Docker available: Docker version 27.5.1, build 27.5.1-0ubuntu3~24.04.2",
+        "Docker Compose available: docker-compose version 1.29.2, build unknown"
+      ],
+      "errors": [
+        "Docker daemon not running: Client:\n Version:    27.5.1\n Context:    default\n Debug Mode: false\n\nServer:\nERROR: permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get \"http://%2Fvar%2Frun%2Fdocker.sock/v1.47/info\": dial unix /var/run/docker.sock: connect: permission denied\nerrors pretty printing info\n"
+      ]
+    }
+  ],
+  "summary": {
+    "total": 8,
+    "passed": 7,
+    "warnings": 0,
+    "failed": 1,
+    "success_rate": 87.5
+  },
+  "recommendations": [
+    "For Linux deployment:",
+    "- Use setup-cross-platform.sh for automated setup",
+    "- Ensure user has docker group permissions",
+    "General recommendations:",
+    "- Review the generated .env.auto file",
+    "- Ensure all dependencies are installed",
+    "- Check file permissions and paths"
+  ],
+  "config": {
+    "platform": "linux",
+    "project_root": "/data/XVUE/XQG4_AXIS/QGEN_IMPFRAG",
+    "directories": {
+      "ifc_input": "/data/XVUE/XQG4_AXIS/QGEN_IMPFRAG/data/ifc",
+      "fragments_output": "/data/XVUE/XQG4_AXIS/QGEN_IMPFRAG/data/fragments",
+      "reports": "/data/XVUE/XQG4_AXIS/QGEN_IMPFRAG/data/reports",
+      "logs": "/data/XVUE/XQG4_AXIS/QGEN_IMPFRAG/backend/logs"
+    },
+    "ports": {
+      "backend": 8111,
+      "frontend": 3111,
+      "frontend_dev": 3111
+    },
+    "python": {
+      "version": "3.12.3",
+      "executable": "/data/XVUE/XQG4_AXIS/QGEN_IMPFRAG/backend/venv/bin/python3",
+      "virtual_env": "/data/XVUE/XQG4_AXIS/QGEN_IMPFRAG/backend/venv",
+      "pip_command": "pip3"
+    },
+    "node": {
+      "npm_command": "npm",
+      "node_command": "node"
+    }
+  }
+}

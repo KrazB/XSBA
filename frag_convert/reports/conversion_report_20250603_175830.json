@@ -1,0 +1,33 @@
+{
+  "conversion_summary": {
+    "total_files": 1,
+    "successful": 1,
+    "failed": 0,
+    "skipped": 0,
+    "start_time": "2025-06-03 17:58:29.151034",
+    "end_time": "2025-06-03 17:58:30.758526",
+    "total_time": 1.607492,
+    "results": [
+      {
+        "file": "3-0000-112-DDR-30-MD-0001_GDA2020.ifc",
+        "status": "success",
+        "message": "Successfully converted 3-0000-112-DDR-30-MD-0001_GDA2020.ifc to fragments",
+        "conversion_time": 1.6044833660125732,
+        "stats": {
+          "inputSizeMB": "0.44",
+          "outputSizeMB": "0.09",
+          "compressionRatio": "79.4%",
+          "conversionTimeSeconds": "1.03",
+          "success": true
+        }
+      }
+    ]
+  },
+  "environment": {
+    "source_directory": "D:\\XQG4\\XQG4_XCIM\\INLR_SHRTBRG\\F1_CO",
+    "target_directory": "D:\\XQG4\\XQG4_XCIM\\INLR_SHRTBRG\\F1_CO",
+    "converter_directory": "D:\\XQG4\\frag_convert",
+    "working_directory": "D:\\XQG4\\frag_convert"
+  },
+  "timestamp": "2025-06-03T17:58:30.763759"
+}

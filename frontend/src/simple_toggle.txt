@@ -1,0 +1,34 @@
+  // Simple working replacement for toggleCategoryVisibility based on ThatOpen tutorials
+  private async toggleCategoryVisibility(category: string) {
+    if (this.loadedModels.length === 0) return;
+
+    try {
+      console.log(`🔄 Toggling visibility for category: ${category}`);
+      
+      for (const { model } of this.loadedModels) {
+        try {
+          // Direct approach following ThatOpen VisibilityOperations tutorial
+          const categoryRegex = new RegExp(`^${category}$`);
+          const items = await model.getItemsOfCategories([categoryRegex]);
+          const localIds = Object.values(items).flat();
+          
+          if (localIds.length > 0) {
+            await model.toggleVisible(localIds);
+            console.log(`✅ Toggled ${localIds.length} ${category} items`);
+          } else {
+            console.log(`ℹ️ No ${category} items found in this model`);
+          }
+        } catch (error) {
+          console.warn(`Failed for ${category}:`, error.message);
+        }
+      }
+      
+      // Update fragments
+      if (this.fragments?.update) {
+        this.fragments.update(true);
+      }
+      
+    } catch (error) {
+      console.error(`Failed to toggle ${category}:`, error);
+    }
+  }

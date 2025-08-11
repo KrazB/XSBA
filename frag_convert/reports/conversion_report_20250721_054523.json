@@ -1,0 +1,33 @@
+{
+  "conversion_summary": {
+    "total_files": 1,
+    "successful": 1,
+    "failed": 0,
+    "skipped": 0,
+    "start_time": "2025-07-21 05:45:22.775396",
+    "end_time": "2025-07-21 05:45:23.837395",
+    "total_time": 1.061999,
+    "results": [
+      {
+        "file": "21 Dorset Square _ Lightwells Extensions_Rev02_X02_Updated.ifc",
+        "status": "success",
+        "message": "Successfully converted 21 Dorset Square _ Lightwells Extensions_Rev02_X02_Updated.ifc to fragments",
+        "conversion_time": 1.0617549419403076,
+        "stats": {
+          "inputSizeMB": "3.18",
+          "outputSizeMB": "0.25",
+          "compressionRatio": "92.3%",
+          "conversionTimeSeconds": "0.90",
+          "success": true
+        }
+      }
+    ]
+  },
+  "environment": {
+    "source_directory": "/data/XQG4/XQG4_XSPL/RIBA_21DORX2/F1_CO",
+    "target_directory": "/data/XQG4/XQG4_XSPL/RIBA_21DORX2/F1_CO",
+    "converter_directory": "/data/XALG/frag_convert",
+    "working_directory": "/data/XALG/frag_convert"
+  },
+  "timestamp": "2025-07-21T05:45:23.837600"
+}

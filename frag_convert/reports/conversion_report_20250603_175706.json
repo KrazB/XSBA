@@ -1,0 +1,26 @@
+{
+  "conversion_summary": {
+    "total_files": 1,
+    "successful": 0,
+    "failed": 1,
+    "skipped": 0,
+    "start_time": "2025-06-03 17:57:04.723322",
+    "end_time": "2025-06-03 17:57:06.290623",
+    "total_time": 1.567301,
+    "results": [
+      {
+        "file": "3-0000-112-DDR-30-MD-0001_GDA2020.ifc",
+        "status": "failed",
+        "message": "Node.js script failed with code 1: [ERROR] Failed to convert 3-0000-112-DDR-30-MD-0001_GDA2020.ifc: EISDIR: illegal operation on a directory, open 'D:\\XQG4\\XQG4_XCIM\\INLR_SHRTBRG\\F1_CO\\3-0000-112-DDR-30-MD-0001_GDA2020.frag'\n   Error details: Error: EISDIR: illegal operation on a directory, open 'D:\\XQG4\\XQG4_XCIM\\INLR_SHRTBRG\\F1_CO\\3-0000-112-DDR-30-MD-0001_GDA2020.frag'\n    at Object.openSync (node:fs:562:18)\n    at Module.writeFileSync (node:fs:2440:35)\n    at IfcFragmentsConverter.convertIfcToFragments (file:///D:/XQG4/frag_convert/convert_ifc_to_fragments.js:75:10)\n    at async main (file:///D:/XQG4/frag_convert/convert_ifc_to_fragments.js:165:18) {\n  errno: -4068,\n  code: 'EISDIR',\n  syscall: 'open',\n  path: 'D:\\\\XQG4\\\\XQG4_XCIM\\\\INLR_SHRTBRG\\\\F1_CO\\\\3-0000-112-DDR-30-MD-0001_GDA2020.frag'\n}\n",
+        "conversion_time": 1.5242869853973389
+      }
+    ]
+  },
+  "environment": {
+    "source_directory": "D:\\XQG4\\XQG4_XCIM\\INLR_SHRTBRG\\F1_CO",
+    "target_directory": "D:\\XQG4\\XQG4_XCIM\\INLR_SHRTBRG\\F1_CO",
+    "converter_directory": "D:\\XQG4\\frag_convert",
+    "working_directory": "D:\\XQG4\\frag_convert"
+  },
+  "timestamp": "2025-06-03T17:57:06.297627"
+}
